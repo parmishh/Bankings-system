@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./components/headTag') -%>
+</head>
+<body>
+    <%- include('./components/navbar') -%>
+
+    
+        <!-- - Back to all users -->
+
+        <div class="container mt-2">
+          <a href="/" class="btn  fw-bold " style="background-color: rgb(36, 174, 162);">&larr; Back</a>
+      </div>
+
+<div class="container mt-5">
+
+     <!-- - Alert msg -->
+     <% if(msg !="" ){%>
+      <div class="alert alert-success text-center " role="alert" id="addMsg">
+
+          <%=msg %>
+      </div>
+
+
+      <%} %>
+
+  <div class="container mt-5 text-center text-light fw-30 p-2" style="background-color: rgb(36, 174, 162);">
+    <h3>Add User Form</h3>
+  </div>
+<form action="/adduser" method="POST" >
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userName" placeholder="Enter User Name" required>
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userEmail" placeholder="Enter User Email">
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputPassword1">Mobile</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" name="userNumber" placeholder="Enter User Contact ">
+
+    </div>
+    <div class="form-group  mt-3">
+        <label for="exampleInputEmail1">Amount</label>
+        <input type="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userAmount" placeholder="Enter Amount">
+
+    <button type="submit" class="btn  mt-3 text-center" style="background-color: rgb(36, 174, 162);">Submit</button>
+  </form>
+</div>
+
+    <%- include('./components/bootstrapScript') -%>
+    <script>
+        let alert = document.getElementById('addMsg');
+    setTimeout(() => {
+        alert.style.visibility = "hidden"
+    }, 2000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./components/headTag') -%>
+    <style>
+        .custom_view{
+            display: flex;
+        }
+        .custom_view_left{
+            flex-basis: 50%;
+        }
+        .custom_view_right{
+            flex-basis: 50%;
+        }
+        #recAmountId:in-range {
+            background-color: rgb(255, 255, 255);
+        }
+        #recAmountId:out-of-range {
+            background-color: rgb(255 0 0 / 18%);
+            color: black;
+        }
+        #recAmountId:in-range+label::after {
+            content: "";
+        }
+        #recAmountId:out-of-range+label::after {
+            content: "Please try with lower amount";
+            font-size: 14px;
+            position: relative;
+            color: #f10202;
+            text-shadow: 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <%- include('./components/navbar') -%>
+    
+        <!-- - Back to all users -->
+
+        <div class="container mt-2">
+          <a href="/data" class="btn  fw-bold " style="background-color: rgb(36, 174, 162);">&larr; Back</a>
+      </div>
+
+    <div class="container  text-center p-2 mt-3" style="background-color: rgb(36, 174, 162);">
+        <h3 class="text-light fw-4">Sender Details</h3>
+    </div>
+    <!-- Sender Details -->
+  <div class="container mt-2 custom_view">
+      <div class="container mt-4 custom_view_left text-center">
+        <i class="far fa-user" style="font-size: 7rem;"></i>
+       
+      </div>
+      <div class="container mt-4 custom_view_right">
+    <% data.forEach((e) => {%>
+        <h4>Name:  <%= e.name %></h4>
+        <h4>Email:  <%= e.email %></h4>
+        <h4>Mobile:  <%= e.contact %></h4>
+        <h4>Balence: <%= e.amount %> </h4>
+        
+    <%}) %>  
+      </div>
+     
+  </div>
+<!-- Reciver -->
+  <div class="container   text-center p-2 mt-3" style="background-color: rgb(36, 174, 162);">
+    <h3 class="text-light fw-4">Reciver Details</h3>
+</div>
+   <div class="container">
+    <form action="/transfer" method="POST" >
+        <div class="form-group mt-3">
+          <label for="exampleInputEmail1">From</label>
+          <% data.forEach((e) => {%>
+            <input type="hidden" name="SenderID" value="<%= e._id %>">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderName" placeholder="Enter User Name" readonly value="<%= e.name %>">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderEmail" placeholder="Enter User Name" readonly value="<%= e.email %>">
+            
+            <%}) %>
+
+         
+         
+        </div>
+        <div class="form-group  mt-3">
+          <label for="exampleInputEmail1">TO</label>
+          <select class="form-select" name="reciverName">
+            <option selected>Select Reciver Name</option>
+            <% records.forEach((e)=>{%>
+
+              <option> <%= e.name %></option>
+            <%}) %>
+          
+          </select>
+         
+        </div>
+        <div class="form-group  mt-3">
+            <select class="form-select"name="reciverEmail">
+            <option selected>Select Reciver Email</option>
+            <% records.forEach((e)=>{%>
+              <option> <%= e.email %> </option>
+
+            <%}) %>
+           
+          </select>
+    
+        </div>
+        <div class="form-group  mt-3">
+            <label for="exampleInputEmail1">Amount</label>
+
+           
+
+            <input type="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="transferAmount" placeholder="Enter Amount" required>
+    
+        <button type="submit" class="btn  mt-3 text-center"style="background-color: rgb(36, 174, 162);">Submit</button>
+      </form>
+   </div>
+    
+    <%- include('./components/bootstrapScript') -%>
+</body>
+</html>

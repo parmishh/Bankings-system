@@ -1,0 +1,29 @@
+{
+  "name": "basic-banking-system",
+  "version": "1.0.0",
+  "description": "A basic banking system application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+   
+  },
+  "keywords": [
+    "bank",
+    "banksystem"
+  ],
+  "author": "Paramjit singh",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^15.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0"
+   
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

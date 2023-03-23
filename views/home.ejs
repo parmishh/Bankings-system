@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Banking App</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SparkBank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0 " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/adduser">Add User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/data">view User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/history">Transfer History</a>
+              </li>
+             
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+
+
+  <!-- -Card Conatiner Start -->
+  <div class="container my-4 custom_card ">
+   
+    <div class="all_customers card bg-dark">
+      <div class="icon">
+         
+          <i class="fas fa-user-plus  text-light"></i>
+      </div>
+      <div class="icon_link text-center bg-light">
+          <a href="/adduser" class="btn btn-light cus_in_btn text-dark"> Add User </a>
+         
+      </div>
+  </div>
+
+    <!-- - All Customer Card -->
+    <div class="all_customers card bg-dark">
+        <div class="icon">
+            <i class="fas fa-users text-light"></i>
+        </div>
+        <div class="icon_link text-center bg-light">
+            <a href="/data" class="btn btn-light cus_in_btn text-dark"> All Customers </a>
+        </div>
+    </div>
+
+
+    <!-- - History Card -->
+    <div class="all_customers card bg-dark">
+      <div class="icon">
+          <i class="fas fa-exchange-alt text-light"></i>
+      </div>
+      <div class="icon_link text-center bg-light">
+          <a href="/history" class="btn btn-light cus_in_btn text-dark"> Transfer History </a>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------- -->
+
+
+
+
+
+
+
+
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted text-light fixed-bottom cus-foot">
+ 
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://Sparkbank.com/">SparkBank</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+   
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./components/headTag') -%>
+</head>
+<body>
+    <%- include('./components/navbar') -%>
+
+        <!-- - Back to all users -->
+
+        <div class="container mt-2">
+          <a href="/" class="btn  fw-bold " style="background-color: rgb(36, 174, 162);">&larr; Back</a>
+      </div>
+      
+<div class="container mt-5">
+ <div class="container mt-5  text-center text-light fw-30 p-2" style="background-color: rgb(36, 174, 162);">
+   <h3>View All Customer</h3>
+ </div>
+
+    <table class="table mt-2">
+        <thead class=" text-light" style="background-color: rgb(36, 174, 162);">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Balence</th>
+            <th scope="col">Action</th>
+            <th scope="col">Remove</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <% if(data.length>0){%>
+            <% data.forEach((e) => {%>
+              <tr>
+                <td><%= e.name %></td>
+                <td><%= e.email %></td>
+                <td><%= e.contact  %></td>
+                <td><%= e.amount  %></td>
+                <td>
+                  <a href="/view/<%=e._id %>" class="btn " style="background-color: rgb(36, 174, 162);">View & Transfer</a>
+                </td>
+                <td>
+                  <a href="/delete/<%=e._id %>"" class="btn btn-danger" >
+                  <i class="fa fa-trash" ></i>
+                </a>
+                </td>
+              </tr>
+                            
+              <%}) %>        
+            
+            <%}else{%>
+              <tr class="bg-warning text-light">
+                <td>
+                  
+                    No records Found!
+                  
+                </td>
+              </tr>
+            
+              
+              <%} %>
+        
+        
+        </tbody>
+      </table>
+    </div>
+
+    <%- include('./components/bootstrapScript') -%>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Basic Banking App</title>
+    <style>
+      body {
+        background-image: url('money.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(36, 174, 162);">
+      <div class="container-fluid">
+        <img src="spark.png" height="30px" width="30px"/>
+        <span><a class="navbar-brand" href="#" style="position: relative;left: -1100px;">SparkBank</a></span>
+        
+      </div>
+    </nav>
+
+    <!-- -Card Conatiner Start -->
+    <div class="container my-4 custom_card ">
+
+      <div class="all_customers card "  style="background-color: rgb(36, 174, 162);">
+        <div class="icon">
+          <img src="add.png" height="100px" width="100px"/>
+        </div>
+        <div class="icon_link text-center bg-light">
+          <a href="/adduser" class="btn btn-light cus_in_btn text-dark" style="font-weight: bold;"> Add User </a>
+        </div>
+      </div>
+
+      <!-- - All Customer Card -->
+      <div class="all_customers card " style="background-color: rgb(36, 174, 162);">
+        <div class="icon">
+          <img src="people.png" height="100px" width="100px"/>
+        </div>
+        <div class="icon_link text-center bg-light">
+          <a href="/data" class="btn btn-light cus_in_btn text-dark" style="font-weight: bold;"> All Customers </a>
+        </div>
+      </div>
+
+      <!-- - History Card -->
+      <div class="all_customers card " style="background-color: rgb(36, 174, 162);">
+        <div class="icon">
+          <img src="transaction.png" height="100px" width="100px"/>
+        </div>
+        <div class="icon_link text-center bg-light">
+          <a href="/history" class="btn btn-light cus_in_btn text-dark" style="font-weight: bold;"> Transfer History </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start  text-muted text-light fixed-bottom cus-foot" style="background-color: rgb(36, 174, 162);">
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(17, 189, 220, 0.05);">
+        <i style="color: black;">© 2023 Copyright:</i>
+        <a class="text-reset fw-bold" href="https://github.com/parmishh" ><i style="color: black;">Paramjit Singh</i></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
